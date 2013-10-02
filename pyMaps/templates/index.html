@@ -2,7 +2,7 @@
 {% block title %} Mapas en Django Test{% endblock %}
 {% block container %}
 	<div class="span10">
-	<input type="text" placeholder="Ingresa una direccion" id="direccion">
+	<input type="text" placeholder="Ingresa una direccion" id="direccion" class="input-xxlarge">
 	<input type="button" id="buscar" class="btn btn-primary" value="Buscar">
 		<div id="mapa" class="google-map-canvas"></div>
 	</div>
@@ -18,7 +18,7 @@
 		<div id="data">
 			<ul>
 			{% for ubicacion in datos%}
-				<li>{{ ubicacion.nombre}} {{ ubicacion.user}} - hace {{  ubicacion.fecha|timesince }}</li>
+				<li>{{ ubicacion.nombre}} {{ ubicacion.user}} - hace {{  ubicacion.fecha|timesince }}</li><i class="icon-search"></i>
 			{% endfor %}
 			</ul>
 		</div>

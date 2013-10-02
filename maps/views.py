@@ -20,7 +20,7 @@ def coords_save(request):
 			data = '<ul>'
 
 			for ubicacion in ubicaciones:
-				data += '<li>%s %s - hace %s</li>' %(ubicacion.nombre,ubicacion.user,timesince(ubicacion.fecha))
+				data += '<li>%s %s - hace %s</li> <i class="icon-search"></i>' %(ubicacion.nombre,ubicacion.user,timesince(ubicacion.fecha))
 
 			data += '</ul>'
 
