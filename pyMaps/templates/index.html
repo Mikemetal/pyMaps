@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Mapas en Django Test{% endblock %}
+{% block container %}
+	<div class="span8">
+		<div id="mapa" class="google-map-canvas"></div>
+	</div>
+	<div id="datos" class="span4">
+		<div id="form">
+			<form action="/coords/save" method="post" id="save_form">{% csrf_token %}
+				{{ form.as_p }}
+				<p>
+					<input type="submit" value="Guardar ubicacion" class="btn btn-primary">
+				</p>
+			</form>
+		</div>
+		<div id="data">
+			<ul>
+			{% for ubicacion in datos%}
+				<li>{{ ubicacion.nombre}} {{ ubicacion.user}} - hace {{  ubicacion.fecha|timesince }}</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% endblock %}
