@@ -27,3 +27,9 @@ def coords_save(request):
 			return HttpResponse(simplejson.dumps({ 'respuesta' : True, 'mensaje' : data}),mimetype='application/json')
 		else:
 			return HttpResponse(simplejson.dumps({ 'respuesta' : False, 'mensaje' : 'No es valida la informacion del form.'}),mimetype='application/json')
+
+def coords_load(request):
+	if request.is_ajax():
+		position = Ubicacion.objects.get(pk=request.POST['id'])
+		print position
+		return HttpResponse(simplejson.dumps({ 'respuesta' : True, 'respuesta' : position}),mimetype='application/json')

@@ -8,6 +8,7 @@ urlpatterns = patterns('maps.views',
     # Examples:
      url(r'^$', 'index', name='index'),
      url(r'^coords/save$', 'coords_save', name='coords_save'),
+     url(r'^coords/load$', 'coords_load', name='coords_load'),
     # url(r'^pyMaps/', include('pyMaps.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -20,7 +20,8 @@
 		<div id="data">
 			<ul>
 			{% for ubicacion in datos%}
-				<li>{{ ubicacion.nombre}} {{ ubicacion.user}} - hace {{  ubicacion.fecha|timesince }}</li>
+				<li>{{ ubicacion.nombre}} {{ ubicacion.user}} - hace {{  ubicacion.fecha|timesince }} <i class="icon-search"></i><span style="display:none">{{ubicacion.id}}</span></li>
+
 			{% endfor %}
 			</ul>
 		</div>
