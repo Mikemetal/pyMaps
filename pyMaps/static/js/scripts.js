@@ -15,14 +15,14 @@ $(document).ready(function(){
 	var geocoder = new google.maps.Geocoder();
 
 	geocoder.geocode({ 'address': 'Mexicali'}, function(result){
-		lat = result[0].geometry.location.lb;
-		lng = result[0].geometry.location.mb;
+		lat = result[0].geometry.location.d;
+		lng = result[0].geometry.location.e;
 
 		var latlng = new google.maps.LatLng(lat,lng);
 
 		var mapSettings = {
 			center : latlng,
-			zoom : 15,
+			zoom : 12,
 			mapTypeId : google.maps.MapTypeId.ROADMAP
 		}
 
