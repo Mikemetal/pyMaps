@@ -11,13 +11,22 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+#DB docdigitales
+# 'USER': 'docdigitales',
+# 'PASSWORD': 'D4t4d0c5',
+
+#DB local
+#  'USER': 'root',
+#  'PASSWORD': 'w4p1ll0',
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'maps',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'root',
-        'PASSWORD': 'w4p1ll0',
+        'USER': 'docdigitales',
+        'PASSWORD': 'D4t4d0c5',
         'HOST': 'localhost',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
